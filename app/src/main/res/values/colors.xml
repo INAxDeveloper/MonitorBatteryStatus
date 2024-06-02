@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorPrimary">#7d87f6</color>
+    <color name="colorPrimaryDark">@color/colorStatusBar</color>
+    <color name="colorAccent">#7d87f6</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="colorBlue">#7d87f6</color>
+    <color name="colorCard">#f2f3fe</color>
+    <color name="colorChartGreen">#4ddf77</color>
+    <color name="colorGreen">#1ebb4e</color>
+    <color name="colorGrey">#5b5b5b</color>
+    <color name="colorPink">#e398e0</color>
+
+    <color name="colorStatusBar">#d9d9d9</color>
+    <color name="colorTextBlack">#0c0d0f</color>
+    <color name="colorWhite">#fff</color>
+
+
+    <color name="pp_color">#d47c26</color>
+    <color name="privacy_policy">#08110c</color>
+    <color name="start_color">#d9d9d9</color>
+    <color name="test_color">#000</color>
+
+</resources>

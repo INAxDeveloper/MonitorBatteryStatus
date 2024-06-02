@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/colorCard"
+        android:padding="15dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/app_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:layout_alignParentStart="true"
+            android:transitionName="profile" />
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/colorTextBlack"
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            android:layout_alignBaseline="@+id/app_usage"
+            android:layout_alignBottom="@+id/app_usage"
+            android:fontFamily="@font/calibrib"
+            android:layout_marginStart="18dp"
+            android:layout_toStartOf="@+id/app_usage"
+            android:layout_toEndOf="@+id/app_image" />
+
+        <TextView
+            android:textSize="14sp"
+            android:id="@+id/app_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@+id/app_name"
+            android:fontFamily="@font/calibri"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/app_image" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/app_time"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_name"
+            android:fontFamily="@font/calibri"
+            android:layout_alignStart="@+id/app_name" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/app_data_usage"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_time"
+            android:fontFamily="@font/calibri"
+            android:layout_alignStart="@+id/app_name" />
+
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/colorTextBlack"
+            android:id="@+id/app_usage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/calibri"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentEnd="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:progress="40"
+            android:progressDrawable="@drawable/bg_progress"
+            android:minHeight="4dp"
+            android:layout_below="@+id/app_val"
+            android:layout_alignStart="@+id/app_val"
+            style="?android:attr/progressBarStyleHorizontal" />
+    </RelativeLayout>
+</layout>

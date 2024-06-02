@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".acitvites.ChartsActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.92"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:theme="@style/ToolbarStyle1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/calibrib"
+                                android:gravity="center"
+                                android:text="Battery Charts"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="20sp" />
+                        </androidx.appcompat.widget.Toolbar>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.08"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/colorCard"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="7dp"
+                                android:background="@color/colorBlue">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_weight="0.35"
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="center_vertical"
+                                    android:text="Filter Data"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.65">
+
+                                    <Spinner
+                                        android:id="@+id/spReportFormats"
+                                        android:layout_width="100dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentEnd="true"
+                                        android:background="@android:color/transparent" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/ic_arrow_down_" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvNote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/calibri"
+                                android:gravity="center"
+                                android:text="You can Zoom &amp; Scroll Chart Horizontally\n for view datas properly"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="30dp"
+                            android:scrollbars="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="370dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@color/colorCard"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="35dp"
+                                                android:background="@color/colorBlue"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/calibri"
+                                                    android:text="Battery Level Chart"
+                                                    android:textColor="@color/colorWhite"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:gravity="end">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center_vertical">
+
+                                                <View
+                                                    android:layout_width="12dp"
+                                                    android:layout_height="12dp"
+                                                    android:background="@drawable/bg_round"
+                                                    android:backgroundTint="@color/colorGreen" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="7dp"
+                                                    android:fontFamily="@font/calibri"
+                                                    android:text="Level Chart"
+                                                    android:textColor="@color/colorTextBlack"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="300dp">
+
+                                        <com.github.mikephil.charting.charts.LineChart
+                                            android:id="@+id/chartBatteryLevel"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="300dp"
+                                            android:layout_marginLeft="14dp"
+                                            android:layout_marginRight="14dp"
+                                            android:background="@color/colorCard" />
+
+                                        <TextView
+                                            android:id="@+id/tvNoDataLevel"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginTop="10dp"
+                                            android:fontFamily="@font/calibri"
+                                            android:text="No data available for battery Level."
+                                            android:textColor="@color/colorBlue"
+                                            android:textSize="14sp" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="370dp"
+                                    android:layout_margin="15dp"
+                                    android:background="@color/colorCard"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:gravity="center">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="35dp"
+                                                android:background="@color/colorBlue"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/calibri"
+                                                    android:text="Battery Voltage Chart"
+                                                    android:textColor="@color/colorWhite"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.5"
+                                            android:gravity="end">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center_vertical">
+
+                                                <View
+                                                    android:layout_width="12dp"
+                                                    android:layout_height="12dp"
+                                                    android:background="@drawable/bg_round"
+                                                    android:backgroundTint="@color/colorGreen" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="7dp"
+                                                    android:fontFamily="@font/calibri"
+                                                    android:text="Voltage Chart"
+                                                    android:textColor="@color/colorTextBlack"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="300dp">
+
+                                        <com.github.mikephil.charting.charts.LineChart
+                                            android:id="@+id/chartBatteryVoltage"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="300dp"
+                                            android:layout_marginLeft="14dp"
+                                            android:layout_marginRight="14dp"
+                                            android:background="@color/colorCard" />
+
+                                        <TextView
+                                            android:id="@+id/tvNoDataVoltage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginTop="10dp"
+                                            android:fontFamily="@font/calibri"
+                                            android:text="No data available for battery voltage."
+                                            android:textColor="@color/colorBlue"
+                                            android:textSize="14sp" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/banner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

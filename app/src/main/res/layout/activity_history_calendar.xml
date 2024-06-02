@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HistoryCalendarActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.92"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:theme="@style/ToolbarStyle1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/calibrib"
+                                android:text="Battery Calendar History"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="20sp" />
+                        </androidx.appcompat.widget.Toolbar>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="30dp"
+                        android:layout_weight="0.08"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="0.4"
+                            android:background="@color/colorCard">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/monthView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="60dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="60dp"
+                                    android:background="@color/colorBlue">
+
+                                    <ImageView
+                                        android:id="@+id/showPreviousMonthBut"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="5dp"
+                                        android:rotation="90"
+                                        android:src="@drawable/ic_arrow_down_" />
+
+                                    <TextView
+                                        android:id="@+id/monthText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/calibri"
+                                        android:gravity="center"
+                                        android:text="January 2020"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="18sp" />
+
+                                    <ImageView
+                                        android:id="@+id/showNextMonthBut"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="15dp"
+                                        android:padding="5dp"
+                                        android:rotation="270"
+                                        android:src="@drawable/ic_arrow_down_" />
+                                </RelativeLayout>
+
+                                <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                                    android:id="@+id/compactcalendar_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/monthView"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    app:compactCalendarBackgroundColor="@color/colorCard"
+                                    app:compactCalendarCurrentDayBackgroundColor="@color/colorGreen"
+                                    app:compactCalendarCurrentDayTextColor="#ffffff"
+                                    app:compactCalendarCurrentSelectedDayBackgroundColor="@color/colorBlue"
+                                    app:compactCalendarCurrentSelectedDayTextColor="@color/colorWhite"
+                                    app:compactCalendarDisplayOtherMonthDays="false"
+                                    app:compactCalendarEventIndicatorStyle="no_fill_large_indicator"
+                                    app:compactCalendarMultiEventIndicatorColor="#fff"
+                                    app:compactCalendarOtherMonthDaysTextColor="#c6c6c6"
+                                    app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="false"
+                                    app:compactCalendarTargetHeight="260dp"
+                                    app:compactCalendarTextColor="@color/colorTextBlack"
+                                    app:compactCalendarTextSize="14sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvToday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:scrollbars="vertical" />
+
+                            <TextView
+                                android:id="@+id/tvNoData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/calibri"
+                                android:text="No charging history found on this date."
+                                android:textColor="@color/colorGrey"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/banner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

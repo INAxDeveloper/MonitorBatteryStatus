@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Monitor Battery Status</string>
+
+    <string name="enable_apps_monitor">Enable Apps Monitor</string>
+    <string name="enable_apps_monitoring">Apps monitoring</string>
+    <string name="ignore">Ignore this app</string>
+    <string name="ignore_hint">Apps in this list will be ignore from consume battery app list</string>
+    <string name="ignore_list">Ignore list</string>
+    <string name="ignore_success">App Moved to ignore list.</string>
+    <string name="label">Label</string>
+    <string name="times_only">times</string>
+    <string name="total">%1$s</string>
+</resources>

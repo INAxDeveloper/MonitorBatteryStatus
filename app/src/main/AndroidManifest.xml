@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MonitorBatteryStatus"
+        tools:targetApi="31">
+        <activity
+            android:name=".ExitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.IgnoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.ChargeHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.ChartsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.BatteryUsageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.BatteryInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.BatteryFullAlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitvites.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.BatteryService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <service android:name=".batteryusage.service.AlarmService" />
+        <service android:name=".batteryusage.service.AppService" />
+
+        <receiver
+            android:name=".receivers.PlugConnectionReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receivers.DeviceBootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".batteryusage.receiver.AlarmReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ALARM_RECEIVER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
